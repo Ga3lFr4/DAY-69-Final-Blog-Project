@@ -69,7 +69,7 @@ class Comment(db.Model):
     post_id = db.Column(db.Integer, ForeignKey('blog_posts.id'))
     post = relationship('BlogPost', back_populates="comments")
 
-db.create_all()
+# db.create_all()
 
 @login_manager.user_loader
 def load_user(user_id):
